@@ -1,0 +1,9 @@
+##################################################
+# Dockerfile to change from root to non-root privilege
+##################################################
+# Base image is ubuntu
+FROM ubuntu:16.04
+# Add a new user 'peter' with user id 7373
+RUN useradd -u 7373 peter
+# Change to non-root privilege
+USER peter
